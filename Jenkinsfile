@@ -1,21 +1,21 @@
 pipeline
 {
 agent any
-  Stages
+  stages
   {
-    Stage('git clone')
-    { Steps
+    stage('git clone')
+    { steps
      {sh 'echo downloading code'}
     }
     
-    Stage('Code Complie')
-      { Steps
+    stage('Code Complie')
+      { steps
      {sh 'echo Code is compiling'}
     }
     
-    Stage('Code Build')
-      { Steps
-     {sh 'echo Code is building'}
+    stage('Code Deploy')
+      { steps
+     {sh 'echo Code is Deployed'}
     }
     
   }
