@@ -8,9 +8,14 @@ agent any
      {sh 'echo downloading code'}
     }
     
-    stage('Code Complie')
+    stage('Code Build')
       { steps
-     {sh 'echo Code is compiling'}
+     {sh 'echo Code is building'}
+    }
+    
+    stage('get approvals')
+    {steps
+     {input "Please approve the deployment?"}
     }
     
     stage('Code Deploy')
